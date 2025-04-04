@@ -104,6 +104,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.core)
     debugImplementation(compose.uiTooling)
 }
 
