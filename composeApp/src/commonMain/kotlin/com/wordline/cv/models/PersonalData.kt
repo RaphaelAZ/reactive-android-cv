@@ -3,6 +3,7 @@ package com.wordline.cv.models
 data class PersonalData (
     val name: String,
     val firstname: String,
+    val about: String,
     val job: String,
     val email: String,
     val skills: List<Skill>,

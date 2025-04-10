@@ -9,13 +9,16 @@ import androidx.compose.ui.unit.sp
 import com.wordline.cv.models.Experience
 
 @Composable
-fun ExperiencesListView(experiences: List<Experience>) {
+fun ExperiencesListView(experiences: List<Experience>, isDarkMode: Boolean) {
+    val textColor = if (isDarkMode) Color.Black else Color.White
+
     Column(modifier = Modifier.padding(top = 8.dp)) {
         experiences.forEach { exp ->
             Text(
                 text = "• ${exp.name}",
                 fontSize = 18.sp,
-                modifier = Modifier.padding(vertical = 2.dp)
+                modifier = Modifier.padding(vertical = 2.dp),
+                color = textColor
             )
             Text(text = exp.content, fontSize = 16.sp, color = Color.Gray)
         }
